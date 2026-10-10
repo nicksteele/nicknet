@@ -1,0 +1,44 @@
+locale: en-US
+site_theme: default
+title: Nick Steele
+name: Nick Steele
+description: Nick Steele — identity and security.
+url: https://nicksteele.net
+baseurl: ""
+repository: nicksteele/nicknet
+author:
+  name: Nick Steele
+  bio: Identity & security
+  github: nicksteele
+  bluesky: kaiju.bsky.social
+  linkedin: nickelsteele
+atom_feed:
+  hide: true
+analytics:
+  provider: false
+comments:
+  provider: false
+include: [_pages]
+exclude: [Gemfile, Gemfile.lock, vendor, node_modules, README.md, AGENTS.md, Dockerfile, docker-compose.yaml, package.json, scripts, markdown_generator, talkmap, talkmap.py, talkmap.ipynb, talkmap_out.ipynb, UPSTREAM.md, _config_local.yml]
+markdown: kramdown
+highlighter: rouge
+future: false
+permalink: /blog/:title/
+timezone: Etc/UTC
+collections:
+  portfolio:
+    output: true
+    permalink: /projects/:path/
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: single
+      author_profile: true
+      comments: false
+      share: false
+      related: false
+sass:
+  sass_dir: _sass
+  style: compressed
+plugins: [jekyll-feed, jekyll-sitemap, jekyll-redirect-from]
